@@ -1,0 +1,88 @@
+.hero {
+    position: relative;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    /* height: permet de coller la nav au container Hero*/
+    
+}
+
+
+.hero_bgd{ 
+    /* Rend la img responsive  */
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover; /* Couvre la <section> */
+    z-index: -1;
+    filter: brightness(0.7); /* Assombrir légèrement pour améliorer la lisibilité du texte */
+     
+} 
+
+.hero_container{
+   padding:0 20px;
+   max-width: 900px; /* Limite la largeur pour les grands écrans */
+   margin: 0 auto;/* Centre le conteneur */
+}
+
+.hero__titres,
+.hero__texte{
+    display: grid;
+    gap: 12px;
+    width: 40%;
+}
+
+.hero__soustitre{
+    font-size: 1.5rem;
+     max-height: 40px; /*Éviter des hauteurs fixes, limite avec max-height */
+    overflow: hidden; /* Évite les débordements de texte */
+}
+
+.hero__titre{
+    font-size: 3rem;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.hero__texte{
+   font-size: 1rem;
+}
+
+
+.hero__boutons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hero__boutons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(68, 68, 68, 0.471);
+    padding: 10px 36px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.hero__boutons a:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Assombrit le fond au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille */
+}
+
+@media screen and (min-width: 780px) {
+    .hero__soustitre{
+        font-size: 1.2rem;
+    }
+    .hero__titre{
+        font-size: 2.5rem;
+    }
+    .hero__texte{
+        font-size: 0.9rem;
+    }
+    .hero__boutons a {
+        padding: 8px 20px;
+    }
+}
