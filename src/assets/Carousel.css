@@ -1,0 +1,28 @@
+.carou {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 40px;
+  scrollbar-width: none; /* Masque la scrollbar pour Firefox */
+  -ms-overflow-style: none; /* Masque la scrollbar pour Internet Explorer */
+}
+
+.carou_image {
+  height: 124px;
+  width: 204px;
+  margin: 0 5px;
+  transition: transform 0.3s ease; /* Transition douce pour le zoom */
+  cursor: pointer; /* Change le curseur pour indiquer une action possible */
+}
+.carou_image:hover {
+  transform: scale(1.2); /* Agrandit légèrement l'image (10%) */
+}
+.carou::-webkit-scrollbar {
+  display: none; /* Masque la scrollbar pour les navigateurs WebKit */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .carousel__image {
+    min-width: 100%;
+  }
+}

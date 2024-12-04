@@ -1,21 +1,17 @@
-import serie6 from "../assets/img/serie6.png"
-import serie7 from "../assets/img/serie6.png"
-import serie8 from "../assets/img/serie6.png"
-import serie9 from "../assets/img/serie6.png"
-import serie10 from "../assets/img/serie6.png"
-import serie11 from "../assets/img/serie6.png"
-import serie12 from "../assets/img/serie6.png"
 
-function Carousel(){
-    return(
-        <div>
-            <img className="" src={serie6} alt="" />
-            <img className="" src={serie7} alt="" />
-            <img className="" src={serie8} alt="" />
-            <img className="" src={serie9} alt="" />
-            <img className="" src={serie10} alt="" />
-            <img className="" src={serie11} alt="" />
-            <img className="" src={serie12} alt="" />
+import "../assets/Carousel.css";
+import React, { useState } from "react";
+
+
+function Carousel({images}) {
+    return( 
+        <div className="carou">
+            {images.map((image,index)=>(
+                <img 
+                key={index} className="carou_image" src={image.src} alt={image.alt|| `Image ${index + 1}`} //mets un texte alternatif pour img
+                />
+            ))};
         </div>
-    )
+    );
 };
+export default Carousel;

@@ -1,5 +1,5 @@
 // import "../assets/Navbar.css";
-import "../assets/Navbar02.css"
+import "../assets/Navbar02.css";
 import logo from "../assets/img/logo.png";
 import dropdown from "../assets/img/dropdown.svg";
 import notification from "../assets/img/notification.svg";
