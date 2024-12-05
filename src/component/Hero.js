@@ -35,13 +35,13 @@ function Hero(){
 
     return (
         <section className="hero">
-         <img className="hero_bgd" src={hero} alt="Narcos" />
+         <img className="hero_bdg" src={result?.backdrop_path ? `https://image.tmdb.org/t/p/original${result.backdrop_path}` : titre="../assets/img/narcos.png"} alt="Narcos" />
             <div className="hero_container">
                 <div className="hero__titres">
-                    <img className="hero__soustitre" src={soustitre}/>
+                    <img className="hero__soustitre" src={soustitre} alt="Netflix Original"/>
                     {result ? (
                     <p>{result.original_title}</p>
-                    ): (<p>chasgeùent</p>)}
+                    ): (<p>Chargement...</p>)}
                 </div>
                 <div className="hero__texte">
                     <h2>Regardez la saison 3 maintenant</h2>
@@ -59,6 +59,7 @@ function Hero(){
                     </a>
                 </div>
             </div>
+
         </section>
         
     );

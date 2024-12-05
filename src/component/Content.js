@@ -39,9 +39,13 @@ function Content(){
     return(
         <div>
             <h2>Revoir</h2>
-            <Carousel images={imagesRevoir}/>
+            <div className="carousel-container">
+                <Carousel images={imagesRevoir}/>
+            </div>
             <h2>Tendances Actuelles</h2>
+            <div className="carousel-container">
             <Carousel images={imagesTendances}/>
+            </div>
         </div>
     );
 };
