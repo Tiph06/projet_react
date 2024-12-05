@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  /* height: permet de coller la nav au container Hero*/
 }
 
 .hero_bgd {
