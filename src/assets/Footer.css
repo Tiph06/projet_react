@@ -1,10 +1,25 @@
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000000;
-    padding: 18px 60px;
-  }
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 18px 60px;
+  color: whitesmoke;
+}
 .socials {
-    height: 34px;
-} 
+  height: 34px;
+}
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Ajoute un soulignement au survol */
+}
